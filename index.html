@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youssef Ayman — Software Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Youssef Ayman — Software Engineer and Computer Science Graduate. An interactive OS desktop experience showcasing projects, skills, and experience." />
+    <meta property="og:title" content="Youssef Ayman — Software Engineer Portfolio" />
+    <meta property="og:description" content="Software Engineer & CS Graduate. Interactive desktop-style portfolio." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== 1. BOOT SCREEN ===== -->
+    <div class="boot-screen" id="bootScreen">
+        <div class="boot-logo">
+            <div class="boot-logo-inner"></div>
+        </div>
+        <div class="boot-text-container" id="bootText">
+            <div class="boot-line" data-delay="300"><span class="info">[SYSTEM]</span> Initiating secure connection<span class="dots">...</span></div>
+            <div class="boot-line" data-delay="700"><span class="ok">[ OK ]</span> Connection established via encrypted channel</div>
+            <div class="boot-line" data-delay="1100"><span class="info">[AUTH]</span> Validating guest credentials<span class="dots">...</span></div>
+            <div class="boot-line" data-delay="1500"><span class="ok">[ OK ]</span> Guest authorization confirmed</div>
+            <div class="boot-line" data-delay="1900"><span class="info">[SYSTEM]</span> Loading candidate profile: Youssef Ayman<span class="dots">...</span></div>
+            <div class="boot-line" data-delay="2300"><span class="ok">[ OK ]</span> Portfolio data synchronized</div>
+            <div class="boot-line" data-delay="2700"><span class="ok">[ OK ]</span> Welcome, <span class="info">Headhunter</span></div>
+        </div>
+        <div class="boot-progress">
+            <div class="boot-progress-bar" id="bootProgressBar"></div>
+        </div>
+    </div>
+
+    <!-- ===== 2. DESKTOP ===== -->
+    <div class="desktop" id="desktop">
+        <div class="desktop-wallpaper">
+            <div class="wallpaper-orb"></div>
+            <div class="wallpaper-grid"></div>
+        </div>
+
+        <div class="desktop-area">
+            <div class="desktop-icons" id="desktopIcons">
+                <!-- Order: About Me, Projects, Skills, Experience, Contact, CV, Help -->
+                <div class="desktop-icon" data-app="about" tabindex="0" role="button" aria-label="Open About Me">
+                    <div class="desktop-icon-img">👤</div>
+                    <span class="desktop-icon-label">About Me</span>
+                </div>
+                <div class="desktop-icon" data-app="projects" tabindex="0" role="button" aria-label="Open Projects">
+                    <div class="desktop-icon-img">📁</div>
+                    <span class="desktop-icon-label">Projects</span>
+                </div>
+                <div class="desktop-icon" data-app="skills" tabindex="0" role="button" aria-label="Open Skills">
+                    <div class="desktop-icon-img">⚙️</div>
+                    <span class="desktop-icon-label">Skills</span>
+                </div>
+                <div class="desktop-icon" data-app="experience" tabindex="0" role="button" aria-label="Open Experience">
+                    <div class="desktop-icon-img">💼</div>
+                    <span class="desktop-icon-label">Experience</span>
+                </div>
+                <div class="desktop-icon" data-app="contact" tabindex="0" role="button" aria-label="Open Contact">
+                    <div class="desktop-icon-img">✉️</div>
+                    <span class="desktop-icon-label">Contact</span>
+                </div>
+                <div class="desktop-icon" data-app="cv" tabindex="0" role="button" aria-label="Open CV">
+                    <div class="desktop-icon-img">📄</div>
+                    <span class="desktop-icon-label">CV</span>
+                </div>
+                <div class="desktop-icon" data-app="help" tabindex="0" role="button" aria-label="Open Help">
+                    <div class="desktop-icon-img">❓</div>
+                    <span class="desktop-icon-label">Help</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== APPLICATION WINDOWS ========== -->
+
+        <!-- ── About Me ── -->
+        <div class="app-window" id="window-about" data-app="about">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">👤</span>
+                <span class="window-titlebar-text">About Me</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <div class="about-name">Youssef Ayman</div>
+                <div class="about-title">Software Engineer | Computer Science Graduate</div>
+                <hr class="win-divider" />
+
+                <div class="win-section-title">About Me</div>
+                <p class="about-text">
+                    I’m a Computer Science graduate at the beginning of my career, focused on learning and
+                    building a strong foundation in software engineering. I’m disciplined, consistent, and take
+                    improvement seriously, whether it’s developing my technical skills or working on real projects.
+
+                    I care about understanding how things work, writing clean code, and growing step by step
+                    through hands-on experience. I’m open to opportunities that challenge me and help me develop as an
+                    engineer.
+                </p>
+
+                <hr class="win-divider" />
+
+                <div class="win-section-title">Education</div>
+
+                <div class="edu-item edu-primary">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-details">
+                        <div class="edu-name">Arab Academy for Science, Technology & Maritime Transport (AASTMT)</div>
+                        <div class="edu-degree">BSc in Computer Science — Software Engineering</div>
+                        <div class="edu-year">2020 – 2026</div>
+                    </div>
+                </div>
+
+                <button class="past-edu-toggle" id="pastEduToggle">
+                    <span class="past-edu-toggle-arrow">▸</span> Past Education
+                </button>
+                <div class="past-edu-content" id="pastEduContent">
+                    <div class="edu-item">
+                        <div class="edu-icon">🏫</div>
+                        <div class="edu-details">
+                            <div class="edu-name">Capital International School</div>
+                            <div class="edu-degree">Secondary Education</div>
+                            <div class="edu-year">2018 – 2019</div>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-icon">🏫</div>
+                        <div class="edu-details">
+                            <div class="edu-name">BBC International School</div>
+                            <div class="edu-degree">Primary & Secondary Education</div>
+                            <div class="edu-year">2006 – 2018</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Projects ── -->
+        <div class="app-window" id="window-projects" data-app="projects" style="width:640px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">📁</span>
+                <span class="window-titlebar-text">Projects</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <!-- Project list view -->
+                <div id="projectsList">
+                    <div class="win-section-title">Featured Projects</div>
+
+                    <div class="project-card" data-project="taskmanager">
+                        <img class="project-thumb" src="images/SC Logo.png" alt="Cloud Task Manager" />
+                        <div class="project-card-body">
+                            <div class="project-name">SentiCore - Predictive Maintenance System (Graduation Project)</div>
+                            <div class="project-desc">A software system designed to predict potential equipment failures
+                                using historical operational data.</div>
+                            <div class="project-tech">
+                                <span class="project-tech-tag">Python</span>
+                                <span class="project-tech-tag">Data Processing</span>
+                                <span class="project-tech-tag">Machine Learning</span>
+                                <span class="project-tech-tag">OOP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="devops">
+                        <img class="project-thumb" src="images/AC Logo.png" alt="Ascend" />
+                        <div class="project-card-body">
+                            <div class="project-name">Ascend - Intelligent Fitness & Nutrition Tracking Platform</div>
+                            <div class="project-desc">A smart fitness and nutrition platform that adapts to your body, training, and goals in real time.</div>
+                            <div class="project-tech">
+                                <span class="project-tech-tag">TypeScript</span>
+                                <span class="project-tech-tag">Next.js</span>
+                                <span class="project-tech-tag">Firebase</span>
+                                <span class="project-tech-tag">Full-Stack Development</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="algorithms">
+                        <img class="project-thumb" src="images/LI Logo.png" alt="LockIn" />
+                        <div class="project-card-body">
+                            <div class="project-name">LockIn - Habit & Discipline Tracking Web App</div>
+                            <div class="project-desc">A discipline-driven habit tracker designed to build consistency through daily accountability.</div>
+                            <div class="project-tech">
+                                <span class="project-tech-tag">JavaScript</span>
+                                <span class="project-tech-tag">HTML/CSS</span>
+                                <span class="project-tech-tag">Progressive Web App (PWA)</span>
+                                <span class="project-tech-tag">Frontend Development</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="sentiment">
+                        <img class="project-thumb" src="images/PP Logo.png" alt="ML Sentiment Analyzer" />
+                        <div class="project-card-body">
+                            <div class="project-name">Youssef OS - Interactive Desktop Portfolio System</div>
+                            <div class="project-desc">An interactive portfolio designed as a desktop operating system
+                                experience, built to present projects, skills, and experience in a clear and engaging
+                                way.</div>
+                            <div class="project-tech">
+                                <span class="project-tech-tag">HTML</span>
+                                <span class="project-tech-tag">CSS</span>
+                                <span class="project-tech-tag">JavaScript</span>
+                                <span class="project-tech-tag">UI/UX Principles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project detail views (hidden by default) -->
+                <div class="project-detail" id="detail-taskmanager">
+                    <button class="project-detail-back" data-back>← Back to Projects</button>
+                    <div class="win-section-title">Predictive Maintenance System (Graduation Project)</div>
+                    <p class="about-text">A software system designed to predict potential equipment failures using
+                        historical operational data.
+                        The project focuses on analyzing patterns in past data to help anticipate issues before they
+                        occur, improving reliability and reducing downtime.
+                        I worked on the system logic, data handling, and overall structure while collaborating within a
+                        team using a structured development process.
+
+                        The system involved collecting and preparing historical datasets, performing basic data
+                        preprocessing, and applying simple predictive logic to identify failure trends.
+                        Emphasis was placed on building a clear and modular architecture that could be easily
+                        understood, tested, and extended. Throughout the project,
+                        we followed software engineering best practices, including version control, documentation, and
+                        iterative development, to deliver a functional prototype and gain practical experience in
+                        designing data-driven systems.</p>
+                    <div class="project-tech" style="margin: 12px 0">
+                        <span class="project-tech-tag">Python</span><span class="project-tech-tag">Data
+                            Processing</span>
+                        <span class="project-tech-tag">Machine Learning</span><span class="project-tech-tag">OOP</span>
+                    </div>
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/PdM Login Page.jpeg"
+                                    alt="Task Manager Screenshot 1" /></div>
+                            <div class="carousel-slide"><img src="images/PdM Dashboard.jpeg"
+                                    alt="Task Manager Screenshot 2" /></div>
+                            <div class="carousel-slide"><img src="images/PdM Machines.jpeg"
+                                    alt="Task Manager Screenshot 3" /></div>
+                            <div class="carousel-slide"><img src="images/PdM Settings.jpeg"
+                                    alt="Task Manager Screenshot 4" /></div>
+                        </div>
+                        <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous">‹</button>
+                        <button class="carousel-arrow carousel-arrow-next" aria-label="Next">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-detail" id="detail-sentiment">
+                    <button class="project-detail-back" data-back>← Back to Projects</button>
+                    <div class="win-section-title">Youssef OS - Interactive Desktop Portfolio System</div>
+                    <p class="about-text">An interactive portfolio designed as a desktop operating system experience,
+                        built to present projects, skills, and experience in a clear and engaging way. The project
+                        focuses on user experience, component-based structure, and clean interaction design rather than
+                        visual gimmicks. It was developed using core web technologies with an emphasis on modular
+                        layout, event-driven interactions, and responsive behavior. The goal was to create an interface
+                        that feels intuitive for all users while demonstrating practical problem-solving, attention to
+                        detail, and a solid understanding of fundamental software engineering concepts.</p>
+                    <div class="project-tech" style="margin: 12px 0">
+                        <span class="project-tech-tag">HTML</span><span class="project-tech-tag">CSS</span>
+                        <span class="project-tech-tag">JavaScript</span><span class="project-tech-tag">UI/UX
+                            Principles</span>
+                    </div>
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/PP Desktop.png"
+                                    alt="Sentiment Analyzer Screenshot 1" /></div>
+                            <div class="carousel-slide"><img src="images/PP Help.png"
+                                    alt="Sentiment Analyzer Screenshot 2" /></div>
+                            <div class="carousel-slide"><img src="images/PP About Me.png"
+                                    alt="Sentiment Analyzer Screenshot 3" /></div>
+                            <div class="carousel-slide"><img src="images/PP Skills.png"
+                                    alt="Sentiment Analyzer Screenshot 4" /></div>
+                        </div>
+                        <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous">‹</button>
+                        <button class="carousel-arrow carousel-arrow-next" aria-label="Next">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-detail" id="detail-devops">
+                    <button class="project-detail-back" data-back>← Back to Projects</button>
+                    <div class="win-section-title">Ascend - Intelligent Fitness & Nutrition Tracking Platform</div>
+                    <p class="about-text">Ascend is a full-stack application that calculates personalized calorie targets, tracks daily food intake, weight progress, and training activity, and continuously adjusts recommendations based on user data. It integrates Firebase authentication and cloud storage to provide a seamless, real-time experience, while maintaining a mobile-first PWA design. The platform focuses on accuracy, performance, and scalability, combining metabolic calculations with structured tracking and social features to create a complete fitness ecosystem.</p>
+                    <div class="project-tech" style="margin: 12px 0">
+                        <span class="project-tech-tag">TypeScript</span><span class="project-tech-tag">Next.js</span>
+                        <span class="project-tech-tag">Firebase</span><span class="project-tech-tag">Full-Stack Development</span>
+                    </div>
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/AC Loading Screen.png"
+                                    alt="DevOps Dashboard Screenshot 1" /></div>
+                            <div class="carousel-slide"><img src="images/AC Login Page.png"
+                                    alt="DevOps Dashboard Screenshot 2" /></div>
+                            <div class="carousel-slide"><img src="images/AC Meal Page.png"
+                                    alt="DevOps Dashboard Screenshot 3" /></div>
+                            <div class="carousel-slide"><img src="images/AC Profile Page.png"
+                                    alt="DevOps Dashboard Screenshot 4" /></div>
+                        </div>
+                        <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous">‹</button>
+                        <button class="carousel-arrow carousel-arrow-next" aria-label="Next">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-detail" id="detail-algorithms">
+                    <button class="project-detail-back" data-back>← Back to Projects</button>
+                    <div class="win-section-title">LockIn</div>
+                    <p class="about-text">LockIn is a lightweight web application focused on tracking daily habits such as prayers, Qur’an reading, and personal goals through a clean and structured interface. It features streak tracking, progress indicators, and simple daily check-ins to encourage long-term consistency. Built as a responsive PWA, the app emphasizes usability, clarity, and a distraction-free experience that helps users stay committed to their routines.</p>
+                    <div class="project-tech" style="margin: 12px 0">
+                        <span class="project-tech-tag">JavaScript</span><span class="project-tech-tag">HTML/CSS</span>
+                        <span class="project-tech-tag">Progressive Web App (PWA)</span> <span class="project-tech-tag">Frontend Development</span>
+                    </div>
+                    <div class="project-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/LI Login.png"
+                                    alt="Algorithms Visualizer Screenshot 1" /></div>
+                            <div class="carousel-slide"><img src="images/LI Loading.png"
+                                    alt="Algorithms Visualizer Screenshot 2" /></div>
+                            <div class="carousel-slide"><img src="images/LI Home Page.png"
+                                    alt="Algorithms Visualizer Screenshot 3" /></div>
+                            <div class="carousel-slide"><img src="images/LI Prayer Page.png"
+                                    alt="Algorithms Visualizer Screenshot 4" /></div>
+                                    <div class="carousel-slide"><img src="images/LI Quuran.png"
+                                    alt="Algorithms Visualizer Screenshot 5" /></div>
+                                    <div class="carousel-slide"><img src="images/LI Hasad.png"
+                                    alt="Algorithms Visualizer Screenshot 6" /></div>
+                                    <div class="carousel-slide"><img src="images/LI Settings.png"
+                                    alt="Algorithms Visualizer Screenshot 7" /></div>
+                        </div>
+                        <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous">‹</button>
+                        <button class="carousel-arrow carousel-arrow-next" aria-label="Next">›</button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Skills ── -->
+        <div class="app-window" id="window-skills" data-app="skills" style="width:600px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">⚙️</span>
+                <span class="window-titlebar-text">Skills — System Capabilities</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <div class="skill-tabs" id="skillTabs">
+                    <button class="skill-tab active" data-tab="languages">Languages</button>
+                    <button class="skill-tab" data-tab="web">Web & APIs</button>
+                    <button class="skill-tab" data-tab="engineering">Engineering</button>
+                    <button class="skill-tab" data-tab="tools">Tools</button>
+                </div>
+
+                <div class="skill-tab-panel active" id="tab-languages">
+                    <div class="skill-item"><span class="skill-item-name">Java</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="55"></div>
+                        </div><span class="skill-level">55%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Python</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="65"></div>
+                        </div><span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">JavaScript</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="40"></div>
+                        </div><span class="skill-level">40%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">TypeScript</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="30"></div>
+                        </div><span class="skill-level">30%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">C++</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="60"></div>
+                        </div><span class="skill-level">60%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">SQL</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="35"></div>
+                        </div><span class="skill-level">35%</span>
+                    </div>
+                </div>
+
+                <div class="skill-tab-panel" id="tab-web">
+                    <div class="skill-item"><span class="skill-item-name">HTML / CSS</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="65"></div>
+                        </div><span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">React</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="50"></div>
+                        </div><span class="skill-level">50%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Node.js</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="50"></div>
+                        </div><span class="skill-level">50%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Express</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="45"></div>
+                        </div><span class="skill-level">45%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">REST APIs</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="60"></div>
+                        </div><span class="skill-level">60%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">GraphQL</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="35"></div>
+                        </div><span class="skill-level">35%</span>
+                    </div>
+                </div>
+
+                <div class="skill-tab-panel" id="tab-engineering">
+                    <div class="skill-item"><span class="skill-item-name">OOP</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="65"></div>
+                        </div><span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Data Structures</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="60"></div>
+                        </div><span class="skill-level">60%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">System Design</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="45"></div>
+                        </div><span class="skill-level">45%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Design Patterns</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="50"></div>
+                        </div><span class="skill-level">50%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">SDLC</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="55"></div>
+                        </div><span class="skill-level">55%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Testing & QA</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="73"></div>
+                        </div><span class="skill-level">73%</span>
+                    </div>
+                </div>
+
+                <div class="skill-tab-panel" id="tab-tools">
+                    <div class="skill-item"><span class="skill-item-name">Git & GitHub</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="65"></div>
+                        </div><span class="skill-level">65%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Docker</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="45"></div>
+                        </div><span class="skill-level">45%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Postman</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="55"></div>
+                        </div><span class="skill-level">55%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">Linux</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="50"></div>
+                        </div><span class="skill-level">50%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">VS Code</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="70"></div>
+                        </div><span class="skill-level">70%</span>
+                    </div>
+                    <div class="skill-item"><span class="skill-item-name">PostgreSQL</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-level="50"></div>
+                        </div><span class="skill-level">50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Experience ── -->
+        <div class="app-window" id="window-experience" data-app="experience" style="width:600px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">💼</span>
+                <span class="window-titlebar-text">Experience</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <div class="win-section-title">Professional Experience</div>
+
+                <div class="exp-item">
+                    <div class="exp-role">Quality Assurance / Software Testing Part Time</div>
+                    <div class="exp-company">Phantasm</div>
+                    <div class="exp-duration">Apr 2023 – Jan 2024</div>
+                    <ul class="exp-bullets">
+                        <li>Tested web and mobile applications to identify functional and UI bugs.</li>
+                        <li>Documented reproducible bug reports and collaborated with developers to verify fixes.</li>
+                        <li>Gained hands-on exposure to QA workflows and defect tracking systems.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-role">Customer Relationship Management (CRM) Intern</div>
+                    <div class="exp-company">Misr Italia</div>
+                    <div class="exp-duration">Jun 2023 – Jul 2023</div>
+                    <ul class="exp-bullets">
+                        <li>Handled client issues and inquiries in person, ensuring professional resolution and follow-up</li>
+                        <li>Managed customer contracts and coordinated cheque processing according to company procedures</li>
+                        <li>Maintained accurate client records and supported coordination between clients and sales teams</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-role">Administrative Operations Intern</div>
+                    <div class="exp-company">Misr Italia</div>
+                    <div class="exp-duration">Mar 2022 – Jun 2022</div>
+                    <ul class="exp-bullets">
+                        <li>Managed daily operations for an office building in coordination with the sales department</li>
+                        <li>Oversaw office workflows to ensure smooth and reliable operations</li>
+                        <li>Logged client visits and assigned customers to appropriate sales representatives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Contact ── -->
+        <div class="app-window" id="window-contact" data-app="contact" style="width:640px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">✉️</span>
+                <span class="window-titlebar-text">Contact</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <div class="win-section-title">Get In Touch</div>
+                <div class="contact-layout">
+                    <!-- Left: Contact Form -->
+                    <form class="contact-form" id="contactForm">
+                        <div>
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" placeholder="Your name" required />
+                        </div>
+                        <div>
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required />
+                        </div>
+                        <div>
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Write your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="contact-form-btn">Send Message</button>
+                    </form>
+
+                    <!-- Right: Contact Info -->
+                    <div class="contact-info-side">
+                        <div class="win-section-title">Contact Info</div>
+                        <div class="contact-row">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-info">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value"><a
+                                        href="mailto:youssefayyman@gmail.com">youssefayyman@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-info">
+                                <div class="contact-label">GitHub</div>
+                                <div class="contact-value"><a href="https://github.com/YousseffAymann" target="_blank"
+                                        rel="noopener">github.com/YousseffAymann</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-info">
+                                <div class="contact-label">LinkedIn</div>
+                                <div class="contact-value"><a href="https://linkedin.com/in/youssef-ayman-se"
+                                        target="_blank" rel="noopener">linkedin.com/in/youssef-ayman-se</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── CV ── -->
+        <div class="app-window" id="window-cv" data-app="cv" style="width:720px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">📄</span>
+                <span class="window-titlebar-text">CV — Curriculum Vitae</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body cv-window-body">
+                <div class="cv-actions">
+                    <button class="cv-action-btn cv-view-btn active" id="cvViewBtn">
+                        <span>🔎</span> View CV
+                    </button>
+                    <a class="cv-action-btn cv-dl-btn" href="assets/cv/Youssef_Ayman_CV.pdf"
+                        download="Youssef_Ayman_CV.pdf">
+                        <span>📥</span> Download CV
+                    </a>
+                    <a class="cv-action-btn cv-newtab-btn" href="assets/cv/Youssef_Ayman_CV.pdf" target="_blank"
+                        rel="noopener">
+                        <span>↗</span> Open in New Tab
+                    </a>
+                </div>
+                <div class="cv-embed-container" id="cvEmbedContainer">
+                    <object data="assets/cv/Youssef_Ayman_CV.pdf" type="application/pdf" class="cv-pdf-embed"
+                        id="cvPdfEmbed">
+                        <div class="cv-pdf-fallback">
+                            <div class="cv-fallback-icon">📄</div>
+                            <p>Your browser cannot display the embedded PDF.</p>
+                            <a class="cv-action-btn cv-dl-btn" href="assets/cv/Youssef_Ayman_CV.pdf" target="_blank"
+                                rel="noopener">
+                                Open CV in New Tab
+                            </a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Help ── -->
+        <div class="app-window" id="window-help" data-app="help" style="width:560px">
+            <div class="window-titlebar">
+                <span class="window-titlebar-icon">❓</span>
+                <span class="window-titlebar-text">Help — How to Use This Portfolio</span>
+                <button class="window-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="window-body">
+                <div class="win-section-title">Welcome!</div>
+                <p class="about-text" style="margin-bottom:20px">This portfolio is designed as an interactive desktop
+                    environment. Here's how to navigate it:</p>
+
+                <div class="help-step">
+                    <div class="help-step-num">1</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Desktop Icons</div>
+                        <div class="help-step-desc">Click any icon on the desktop to open the corresponding application.
+                            Each icon represents a different section of the portfolio.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">2</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">About Me</div>
+                        <div class="help-step-desc">Learn about my background, education, and engineering philosophy.
+                            Click the <strong>About Me</strong> icon.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">3</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Projects</div>
+                        <div class="help-step-desc">Browse my engineering projects. Click any project card to see a
+                            detailed view with screenshots and technologies used.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">4</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Skills</div>
+                        <div class="help-step-desc">View my technical skills organized by category. Use the tabs at the
+                            top to switch between Programming Languages, Web & APIs, Engineering Concepts, and Tools.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">5</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Experience</div>
+                        <div class="help-step-desc">See my professional experience, including internships, freelance
+                            work, and teaching. Open the <strong>Experience</strong> icon.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">6</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Contact</div>
+                        <div class="help-step-desc">Send me a message using the contact form, or find my email, GitHub,
+                            and LinkedIn on the right side of the Contact window.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">7</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">CV</div>
+                        <div class="help-step-desc">View my full curriculum vitae. You can also download it as a PDF
+                            using the button at the bottom.</div>
+                    </div>
+                </div>
+
+                <div class="help-step">
+                    <div class="help-step-num">8</div>
+                    <div class="help-step-text">
+                        <div class="help-step-title">Managing Windows</div>
+                        <div class="help-step-desc">You can open multiple windows at once. Drag windows by their title
+                            bar to reposition them. Click the <strong>×</strong> button to close a window. Use the
+                            taskbar at the bottom to switch between open windows.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TASKBAR ===== -->
+        <div class="taskbar" id="taskbar">
+            <div class="taskbar-start">
+                <button class="taskbar-start-btn" aria-label="Start menu">⬡</button>
+                <div class="taskbar-divider"></div>
+            </div>
+            <div class="taskbar-apps" id="taskbarApps"></div>
+            <div class="taskbar-tray" id="taskbarTray">
+                <!-- Wi-Fi -->
+                <div class="tray-icon" title="Wi-Fi: Connected">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z" />
+                    </svg>
+                </div>
+                <!-- Volume -->
+                <div class="tray-icon" title="Volume">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                    </svg>
+                </div>
+                <!-- Notification Bell -->
+                <div class="tray-icon" title="Notifications">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+                    </svg>
+                </div>
+                <!-- Battery -->
+                <div class="tray-icon" title="Battery: 85%">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z" />
+                    </svg>
+                </div>
+                <div class="taskbar-divider"></div>
+            </div>
+            <div class="taskbar-clock" id="taskbarClock">
+                <div class="taskbar-time">--:--</div>
+                <div>--/--/----</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== IMAGE LIGHTBOX MODAL ===== -->
+    <div class="image-modal" id="imageModal">
+        <button class="image-modal-close" id="imageModalClose" aria-label="Close">&times;</button>
+        <button class="image-modal-nav prev" id="imageModalPrev" aria-label="Previous">‹</button>
+        <img class="image-modal-img" id="imageModalImg" src="" alt="Fullscreen Image View" />
+        <button class="image-modal-nav next" id="imageModalNext" aria-label="Next">›</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
