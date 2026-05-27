@@ -701,6 +701,214 @@ a:hover {
     font-family: var(--font-mono);
 }
 
+/* --- Skills Intro Banner & Dotted Learning --- */
+.skills-intro {
+    background: rgba(79, 195, 247, 0.04);
+    border: 1px dashed rgba(79, 195, 247, 0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.skill-learning-intro {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.skill-learning-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.skill-learning-name {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-bright);
+    white-space: nowrap;
+}
+
+.skill-learning-dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted var(--text-muted);
+    margin: 0 10px;
+    position: relative;
+    top: 4px;
+}
+
+.skill-learning-status {
+    font-size: 12.5px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+}
+
+/* --- Certifications Window --- */
+.cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cert-header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cert-logo-container {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-window-title);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.cert-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 2px;
+}
+
+.cert-provider {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.cert-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cert-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cert-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cert-value {
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-align: center;
+    width: fit-content;
+}
+
+.status-badge.in-progress {
+    background: rgba(79, 195, 247, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(79, 195, 247, 0.25);
+}
+
+.cert-progress-section {
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.01);
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.cert-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.progress-title {
+    color: var(--text-secondary);
+}
+
+.progress-pct {
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.cert-progress-bar-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cert-progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+}
+
+.cert-topics-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cert-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.topic-item {
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topic-check {
+    color: #4caf50;
+    font-weight: bold;
+}
+
 /* --- Projects --- */
 .project-card {
     background: var(--bg-card);
